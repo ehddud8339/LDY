@@ -1,0 +1,17 @@
+[global]
+name=chp_test
+directory=/mnt/test
+numjobs=16
+ioengine=libaio
+iodepth=1
+direct=0
+norandommap
+group_reporting=1
+#end_fsync=1
+
+[rand-write]
+bs=4K
+rw=randwrite
+size=1G
+time_based
+runtime=60

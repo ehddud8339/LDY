@@ -1,0 +1,36 @@
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl site.ycsb:rocksdb-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /home/ldy/YCSB/rocksdb/conf:/home/ldy/YCSB/rocksdb/target/rocksdb-binding-0.18.0-SNAPSHOT.jar:/root/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/root/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/root/.m2/repository/net/jcip/jcip-annotations/1.0/jcip-annotations-1.0.jar:/root/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/root/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/root/.m2/repository/org/rocksdb/rocksdbjni/6.2.2/rocksdbjni-6.2.2.jar:/root/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/ldy/YCSB/core/target/core-0.18.0-SNAPSHOT.jar site.ycsb.Client -db site.ycsb.db.rocksdb.RocksDBClient -P workloads/workloada -P db.properties -p recordcount=10000000 -load
+Command line: -db site.ycsb.db.rocksdb.RocksDBClient -P workloads/workloada -P db.properties -p recordcount=10000000 -load
+YCSB Client 0.18.0-SNAPSHOT
+
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+DBWrapper: report latency for each error is false and specific error codes to track for latency are: []
+[OVERALL], RunTime(ms), 151942
+[OVERALL], Throughput(ops/sec), 65814.58714509483
+[TOTAL_GCS_PS_Scavenge], Count, 1284
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 908
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.5975964512774611
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1284
+[TOTAL_GC_TIME], Time(ms), 908
+[TOTAL_GC_TIME_%], Time(%), 0.5975964512774611
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 98848.0
+[CLEANUP], MinLatency(us), 98816
+[CLEANUP], MaxLatency(us), 98879
+[CLEANUP], 95thPercentileLatency(us), 98879
+[CLEANUP], 99thPercentileLatency(us), 98879
+[INSERT], Operations, 10000000
+[INSERT], AverageLatency(us), 14.2124132
+[INSERT], MinLatency(us), 6
+[INSERT], MaxLatency(us), 128959
+[INSERT], 95thPercentileLatency(us), 20
+[INSERT], 99thPercentileLatency(us), 32
+[INSERT], Return=OK, 10000000
